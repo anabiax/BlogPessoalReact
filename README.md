@@ -7,9 +7,7 @@ Versão utilizada: React 17
 ## Comandos para a execução do projeto:
 
 ****`npx create-react-app nome-do-projeto --template typescript`**** (criar um projeto react typescript)
-
-cd nome-do-projeto` (entrar na pasta do arquivo)
-
+****`cd nome-do-projeto`**** (entrar na pasta do arquivo)
 ****`yarn start`**** (executa os scripts)
 
 Abrir na porta padrão fornecida no terminal, no caso [http://localhost:3000](http://localhost:3000/).
