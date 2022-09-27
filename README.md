@@ -8,7 +8,7 @@ Versão utilizada: React 17
 
 ****`npx create-react-app nome-do-projeto --template typescript`**** (criar um projeto react typescript)
 
-****`cd nome-do-projeto` (entrar na pasta do arquivo)
+cd nome-do-projeto` (entrar na pasta do arquivo)
 
 ****`yarn start`**** (executa os scripts)
 
