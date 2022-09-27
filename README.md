@@ -16,8 +16,8 @@ Abrir na porta padrão fornecida no terminal, no caso [http://localhost:3000](ht
 
 Em andamento.
 
-## Learn More
+## Mais informações
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Ler [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Para saber mais da biblioteca [React documentation](https://reactjs.org/).
