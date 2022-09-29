@@ -14,7 +14,7 @@ function Navbar() {
     return (
         <div className={styles.root}>
             <AppBar position="static">
-                <Toolbar>
+                <Toolbar variant="dense" style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <IconButton
                         edge="start"
                         className={styles.menuButton}
@@ -28,7 +28,7 @@ function Navbar() {
                         Blog
                     </Typography>
 
-                    <Box display="flex" justifyContent="start">
+                    <Box display="flex" justifyContent="flex-end">
                         <Box mx={1} style={{ cursor: "pointer" }}>
                             <Typography variant="h6" color="inherit">
                                 Home
