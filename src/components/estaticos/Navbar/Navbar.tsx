@@ -2,11 +2,15 @@ import React from 'react'
 import { AppBar, Toolbar, IconButton, Typography, InputBase } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
+import blueGrey from '@material-ui/core/colors/blueGrey';
 import styles from './Navbar.module.css'
 import { Box } from '@mui/material';
 
 
 function Navbar() {
+    const cinzaMediano = blueGrey[900]; //#263238
+    const cinzaClaro = blueGrey[500]; // #607d8b
+    
     return (
         <div className={styles.root}>
             <AppBar position="static">
