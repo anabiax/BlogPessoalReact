@@ -51,7 +51,7 @@ function Navbar() {
 
                         <Box mx={1} style={{ cursor: "pointer" }}>
                             <Typography variant="h6" color="inherit">
-                                logout
+                                Logout
                             </Typography>
                         </Box>
                     </Box>
@@ -66,8 +66,6 @@ function Navbar() {
                             inputProps={{ 'aria-label': 'search' }}
                         />
                     </div>
-
-                    
 
                 </Toolbar>
             </AppBar>
