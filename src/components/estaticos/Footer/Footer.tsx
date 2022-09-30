@@ -11,13 +11,13 @@ function Footer() {
 
     return(
         <>
-                <Grid container direction="row" justifyContent="center" alignItems="center">
-                    <Grid alignItems="center" item xs={12}>
-                        <Box style={{ backgroundColor: "#383838", height: "120px" }}>
-                            <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
-                                <Typography variant="h5" align="center" gutterBottom style={{ color: "white" }}>Contacte-me </Typography>
+                <Grid container className='container'>
+                    <Grid className='subcontainer' item xs={12}>
+                        <Box className='box'>
+                            <Box className="subbox">
+                                <Typography className='outrobox' variant="h5" gutterBottom >Contacte-me</Typography>
                             </Box>
-                            <Box display="flex" alignItems="center" justifyContent="center">
+                            <Box className='social'>
                                 <a href="https://www.linkedin.com/in/anabsantoss/" target="_blank">
                                     <LinkedInIcon style={{ fontSize: 60, color: "white" }} />
                                 </a>
@@ -26,15 +26,13 @@ function Footer() {
                                 </a>
                             </Box>
                         </Box>
-                        <Box style={{ backgroundColor: "#212121", height: "70px" }}>
+                        <Box className='footerbaixo'>
                             <Box paddingTop={1}>
-                                <Typography variant="subtitle2" align="center" gutterBottom style={{ color: "white" }} >© 2022 Copyright</Typography>
+                                <Typography variant="subtitle2" className='footerbaixo2' gutterBottom >© 2022 Copyright</Typography>
                             </Box>
                             <Box >
                                 <hr></hr>
-                                <a >
-                                    <Typography variant="subtitle2" gutterBottom style={{ color: "white" }} align="center">Desenvolvido por Ana Beatriz dos Santos.</Typography>
-                                </a>
+                                <Typography variant="subtitle2" gutterBottom className='footerbaixo2'>Desenvolvido por Ana Beatriz dos Santos.</Typography>
                             </Box>
                         </Box>
                     </Grid>

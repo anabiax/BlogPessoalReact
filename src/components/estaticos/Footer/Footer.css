@@ -1,0 +1,45 @@
+.container{
+    align-items: center;
+    justify-content: center;
+    direction: row;
+}
+
+.subcontainer {
+    align-items: center;
+}
+
+.box {
+    align-items: center;
+    background-color: #383838;
+}
+
+.subbox{
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6px;
+}
+
+.outrobox {
+    align-items: center;
+    color: white;
+
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.footerbaixo {
+    background-color: #212121;
+    height: 70px;
+}
+
+.footerbaixo2 {
+    color: white ;
+    text-align: center;
+}
