@@ -16,7 +16,7 @@ function Login() {
                             <TextField id="outlined-basic" label="Usuario" variant="outlined" fullWidth margin='normal'></TextField>
                             <TextField id="outlined-basic" label="Senha" variant="outlined" fullWidth margin='normal'></TextField>
 
-                            <Link to="/home"><Button type="submit" variant="contained" color="primary">Entrar</Button></Link>
+                            <Link to="/home"><Button type="submit" variant="contained" style={{ backgroundColor: "#212121", color: "#fff" }}>Entrar</Button></Link>
                         </form>
                     
 

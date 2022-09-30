@@ -1,20 +1,19 @@
 import React from 'react'
 import './Footer.css'
-import blueGrey from '@material-ui/core/colors/blueGrey';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import { Typography, Grid } from '@material-ui/core';
-import { Box } from '@mui/material';
+import blueGrey from '@material-ui/core/colors/blueGrey'
+import LinkedInIcon from '@material-ui/icons/LinkedIn'
+import GitHubIcon from '@material-ui/icons/GitHub'
+import { Typography, Grid } from '@material-ui/core'
+import { Box } from '@mui/material'
 
 function Footer() {
     const cinzaMediano = blueGrey[900]; //#263238
-    const cinzaClaro = blueGrey[500]; // #607d8b
 
     return(
         <>
                 <Grid container direction="row" justifyContent="center" alignItems="center">
                     <Grid alignItems="center" item xs={12}>
-                        <Box style={{ backgroundColor: "#37474f", height: "120px" }}>
+                        <Box style={{ backgroundColor: "#383838", height: "120px" }}>
                             <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
                                 <Typography variant="h5" align="center" gutterBottom style={{ color: "white" }}>Contacte-me </Typography>
                             </Box>

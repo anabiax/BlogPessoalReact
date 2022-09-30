@@ -3,7 +3,6 @@ import Navbar from './components/estaticos/Navbar/Navbar'
 import Home from './pages/Home/Home'
 import Login from './pages/Login/Login'
 import Footer from './components/estaticos/Footer/Footer'
-// import { Login } from '@mui/icons-material';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -23,4 +22,4 @@ function App() {
   )
 }
 
-export default App;
+export default App
