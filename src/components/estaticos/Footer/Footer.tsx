@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Footer.module.css'
+import './Footer.css'
 import blueGrey from '@material-ui/core/colors/blueGrey';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';

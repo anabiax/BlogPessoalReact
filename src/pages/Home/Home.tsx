@@ -1,13 +1,11 @@
 import React from 'react'
 import { Typography, Grid, Button } from '@material-ui/core';
 import { Box } from '@mui/material'
-import styles from './Home.module.css'
+import './Home.css'
+import fotoLogo from '../../components/img/logo.png'
 
 
 function Home() {
-
-    // função do TS
-    let nome: string = "Ana"
 
     return (
         <>
@@ -24,7 +22,7 @@ function Home() {
                     </Box>
                 </Grid>
                 <Grid item xs={6} >
-                    <img src="https://i.imgur.com/H88yIo2.png" alt="" width="500px" height="500px" />
+                    <img src={fotoLogo} alt="imagem de um notebook e um computador" width="800px" height="500px" />
                 </Grid>
                 <Grid xs={12} style={{ backgroundColor: "white" }}>
                 </Grid>

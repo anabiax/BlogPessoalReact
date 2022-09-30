@@ -1,0 +1,7 @@
+.bg-login {
+    min-width: 100vh; /* no mínimo tem o tamanho inteiro da minha tela*/
+    background-image: url("https://lumiere-a.akamaihd.net/v1/images/original_1603304767_this_is_us_4_-_fox_premium_dbfede8b.jpeg");
+    width: 100%;
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
