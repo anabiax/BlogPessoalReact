@@ -22,23 +22,23 @@ Flex box - elementos organizados dentro de containers.
 
 Instalação do Material-UI
 
-`yarn add @material-ui/core@4.12.3**` 
+`yarn add @material-ui/core@4.12.3` 
 
-`yarn add @material-ui/icons@4.11.2**` 
+`yarn add @material-ui/icons@4.11.2` 
 
-`yarn add @mui/icons-material@5.0.5**` 
+`yarn add @mui/icons-material@5.0.5` 
 
-`yarn add @material-ui/lab@4.0.0-alpha.60**` 
+`yarn add @material-ui/lab@4.0.0-alpha.60` 
 
-`yarn add @emotion/react@11.5.0**`
+`yarn add @emotion/react@11.5.0`
 
-`yarn add @emotion/styled@11.3.0**`
+`yarn add @emotion/styled@11.3.0`
 
-`yarn add @mui/material@5.0.6**`
+`yarn add @mui/material@5.0.6`
 
 ## Comando de instalação p/ a utilização de rotas:
 
-`yarn add react-router-dom@6**`
+`yarn add react-router-dom@6`
 
 ## Status:
 
