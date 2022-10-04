@@ -1,5 +1,5 @@
 import React, { useState, useEffect, ChangeEvent } from 'react'
-import Usuario from '../../model/User';
+import User from '../../model/User';
 import { cadastroUsuario } from '../../services/Service';
 import './CadastroUsuario.css'
 import { Link, useNavigate} from 'react-router-dom';
@@ -13,7 +13,7 @@ function CadastroUsuario() {
 
     const[confirmarSenha, setConfirmarSenha] = useState<String>('')
 
-    const[user, setUser] = useState<Usuario>({
+    const[user, setUser] = useState<User>({
         id: 0, // n tem como começar em branco, então inicializa em zero
         nome: '',
         usuario: '',
@@ -22,7 +22,7 @@ function CadastroUsuario() {
 
 
     // armazena os valores do retorno da API -- JSON
-    const[userResult, setUserResult] = useState<Usuario>({
+    const[userResult, setUserResult] = useState<User>({
         id: 0, 
         nome: '',
         usuario: '',

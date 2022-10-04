@@ -4,7 +4,7 @@ import { Typography, Button } from '@material-ui/core';
 import { Grid, Box, TextField } from '@mui/material'
 import { Link, useNavigate } from 'react-router-dom'
 // import logo from '../../components/img/logo.png'
-import UsuarioLogin from '../../model/UserLogin';
+import UserLogin from '../../model/UserLogin';
 import { login } from '../../services/Service';
 import useLocalStorage from 'react-use-localstorage';
 
@@ -14,7 +14,7 @@ function Login() {
 
     const[token, setToken] = useLocalStorage('token')
                                                 // isso aqui é TypeScript
-    const[userLogin, setUserLogin] = useState<UsuarioLogin>({
+    const[userLogin, setUserLogin] = useState<UserLogin>({
         id: 0, // n tem como começar em branco, então inicializa em zero
         usuario: '',
         senha: '' ,
