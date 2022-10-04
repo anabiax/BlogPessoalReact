@@ -1,5 +1,5 @@
 import React, { useState, useEffect, ChangeEvent } from 'react'
-import Usuario from '../../model/Usuario';
+import Usuario from '../../model/User';
 import { cadastroUsuario } from '../../services/Service';
 import './CadastroUsuario.css'
 import { Link, useNavigate} from 'react-router-dom';

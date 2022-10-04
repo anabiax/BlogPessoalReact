@@ -4,7 +4,7 @@ import { Typography, Button } from '@material-ui/core';
 import { Grid, Box, TextField } from '@mui/material'
 import { Link, useNavigate } from 'react-router-dom'
 // import logo from '../../components/img/logo.png'
-import UsuarioLogin from '../../model/UsuarioLogin';
+import UsuarioLogin from '../../model/UserLogin';
 import { login } from '../../services/Service';
 import useLocalStorage from 'react-use-localstorage';
 
