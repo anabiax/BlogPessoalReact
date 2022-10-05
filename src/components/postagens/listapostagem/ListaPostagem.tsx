@@ -32,7 +32,7 @@ function ListaPostagem() {
 
                             <Link to='' className="text-decorator-none">
                                 <Box mx={1}>
-                                    <Button variant='contained' className='marginLeft' size='small' color='primary'>
+                                    <Button variant='contained' size='small' style={{ backgroundColor: "#A10035", color: "white" }}>
                                         Atualizar
                                     </Button>
                                 </Box>
@@ -40,7 +40,7 @@ function ListaPostagem() {
 
                             <Link to='' className='text-decorator-none'>
                                 <Box mx={1}>
-                                    <Button variant='contained' size='small' color='secondary'>
+                                    <Button variant='contained' size='small' style={{ backgroundColor: "#212121", color: "white" }}>
                                         Deletar
                                     </Button>
                                 </Box>

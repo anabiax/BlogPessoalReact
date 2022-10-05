@@ -7,7 +7,6 @@ import { AppBar, Toolbar, Tooltip } from '@material-ui/core'
 import { Box, Menu, Container, Avatar, Button, MenuItem, Typography, IconButton } from '@mui/material'
 
 
-
 const pages = ['Home', 'Postagens', 'Temas', 'Cadastrar Tema'];
 const settings = ['Perfil', 'Conta', 'Logout'];
 
@@ -37,7 +36,6 @@ function Navbar() {
     <AppBar position="static" style={{ borderColor: "white", backgroundColor: "#212121", color: "white" }} >
         <Container maxWidth="xl">
             <Toolbar disableGutters>
-                <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
                     <Typography
                         variant="h6"
                         noWrap
