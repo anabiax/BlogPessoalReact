@@ -1,0 +1,9 @@
+.box-listapostagem {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.titulo {
+    font-weight: bold;
+}

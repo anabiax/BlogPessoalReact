@@ -9,7 +9,8 @@ import { Box, Button, Grid, TextField } from '@mui/material'
 
 function CadastroUsuario() {
 
-    let navigate = useNavigate()
+    let navigate = useNavigate() // precisa de uma função p/ cadastrar e/ou trocar a pessoa de tela
+    // o useNavigate consegue entender as rotas de forma automática s/ precisar do link
 
     const[confirmarSenha, setConfirmarSenha] = useState<String>('')
 
@@ -18,6 +19,7 @@ function CadastroUsuario() {
         nome: '',
         usuario: '',
         senha: '' ,
+        foto: '',
     })
 
 
@@ -27,11 +29,12 @@ function CadastroUsuario() {
         nome: '',
         usuario: '',
         senha: '' ,
+        foto: '',
     })
 
     // responsável pelo controle do ciclo de vida de um componente, acionado após o envio das infos
     useEffect(() => {
-        if(userResult.id != 0) {
+        if(userResult.id !== 0) { // indica que n está usando o valor padrão inicializado ali em cima
             navigate('/login')
         }
     }, [userResult])
@@ -50,25 +53,29 @@ function CadastroUsuario() {
     // essa função vai acessar o meu back-end
     async function onSubmit(event: ChangeEvent<HTMLFormElement>) {
         event.preventDefault()
-        if(confirmarSenha == user.senha) {
-            cadastroUsuario(`usuarios/cadastrar`, user, setUserResult)
-            alert("Usuário cadastrado com sucesso!");
+        if(confirmarSenha === user.senha && user.senha.length >= 8) {
+            try {
+                await cadastroUsuario(`usuarios/cadastrar`, user, setUserResult)
+                alert("Usuário cadastrado com sucesso!");
+            } catch (error) {
+                alert("Falha ao cadastrar o usuário. Por favor, confira os campos.")
+            }
         } else {
-            alert("Dados inconsistentes. Erro ao cadastrar, por favor, verifique as informações de cadastro.");
+            alert("Dados inconsistentes. Erro ao cadastrar, por favor, verifique as informações submetidas.");
         }
-    }
+    } 
 
 
     return(
         <>
-            <Grid container direction='row' alignItems='center' justifyContent='center'>
+            <Grid container className='container'>
                 <Grid item xs={6} className='imagem'></Grid>
                     <Grid container xs={6} justifyContent='center'>
                     
                     <Grid item xs={8} justifyContent='center'>
 
                         <form onSubmit={onSubmit}>
-                            <Typography variant='h3'>Cadastre-se</Typography>
+                            <Typography variant='h3' className='titulo' style={{ fontWeight: 'bold' }}>Cadastre-se</Typography>
 
                             <TextField
                                 id="nome"
@@ -79,6 +86,7 @@ function CadastroUsuario() {
                                 variant="outlined"
                                 fullWidth
                                 margin="normal"
+                                required
                             />
 
                             <TextField
@@ -86,20 +94,22 @@ function CadastroUsuario() {
                                 name="usuario"
                                 value={user.usuario}
                                 onChange={(event: ChangeEvent<HTMLInputElement>) => updatedModel(event)}
-                                label="Usuário"
+                                label="Usuário (e-mail)"
                                 variant="outlined"
                                 fullWidth
                                 margin="normal"
+                                required
                             />
 
-                            {/* <TextField
-                                id="email"
-                                name="email"
-                                label="E-mail"
+                            <TextField
+                                id="foto"
+                                name="foto"
+                                label="foto (url)"
                                 variant="outlined"
                                 fullWidth
                                 margin="normal"
-                            /> */}
+                                required
+                            />
 
                             <TextField
                                 id="senha"
@@ -111,6 +121,7 @@ function CadastroUsuario() {
                                 fullWidth
                                 type="password"
                                 margin="normal"
+                                required
                             />
                             <TextField
                                 id="confirmarSenha"
@@ -122,6 +133,7 @@ function CadastroUsuario() {
                                 fullWidth
                                 type="password"
                                 margin="normal"
+                                required
                             />
 
                             <Box className='text-decorator-none'>
@@ -131,7 +143,7 @@ function CadastroUsuario() {
                                     </Button>
                                 </Link>
                                 
-                                <Button type='submit' variant="contained" style={{ backgroundColor: "#212121", color: "#fff" }}>
+                                <Button type='submit' variant="contained" className='btnCancelar' style={{ backgroundColor: "#212121", color: "#fff" }}>
                                         Cadastrar
                                 </Button>
                             </Box>

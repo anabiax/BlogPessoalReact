@@ -34,7 +34,7 @@ function Navbar() {
     }
     
     return (
-    <AppBar position="static" style={{ borderColor: "white", backgroundColor: blueGrey[900], color: "white" }} >
+    <AppBar position="static" style={{ borderColor: "white", backgroundColor: "#212121", color: "white" }} >
         <Container maxWidth="xl">
             <Toolbar disableGutters>
                 <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -132,7 +132,7 @@ function Navbar() {
                         <Box sx={{ flexGrow: 0 }}>
                             <Tooltip title="Open settings">
                                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                    <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                                    <Avatar alt="Remy Sharp"/>
                                 </IconButton>
                             </Tooltip>
                             <Menu

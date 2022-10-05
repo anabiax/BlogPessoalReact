@@ -7,6 +7,17 @@
     background-position: center;
 }
 
+.container {
+    align-items: center;
+    direction: row;
+    justify-content: center;
+}
+
+.titulo {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
 .btnCancelar {
     margin-right: 20px !important;
     background-color: #212121;

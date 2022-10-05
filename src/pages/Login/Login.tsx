@@ -16,65 +16,91 @@ function Login() {
                                                 // isso aqui é TypeScript
     const[userLogin, setUserLogin] = useState<UserLogin>({
         id: 0, // n tem como começar em branco, então inicializa em zero
+        nome: '' ,
         usuario: '',
         senha: '' ,
+        foto: '',
         token: '',
     })
 
+    // atualizar a model com o valor que o usuário digitar no input
     function updatedModel(event: ChangeEvent<HTMLInputElement>) {
         setUserLogin({
             ...userLogin,
-            [event.target.name]: event.target.value
-        })
-        setUserLogin(userLogin)
+    // composição do objeto: a chave representa o nome do campo e o valor que o usuário digitou
+            [event.target.name]: event.target.value //valor que o usuário digita
+        })              //name do textfield -- capturando a propriedade
     }
 
-    // essa função vai acessar o meu back-end
+    // essa função vai acessar o meu back-end enviando os dados de login do usuário
     async function onSubmit(event: ChangeEvent<HTMLFormElement>) {
         event.preventDefault()
         try {
-            await login (`usuarios/logar`, userLogin, setToken)
+            await login ('usuarios/logar', userLogin, setToken)
             alert("Usuário logado com sucesso!");
 
         } catch(error) {
             alert("Dados inconsistentes. Erro ao logar.");
         }
-
     }
 
     // responsável pelo controle do ciclo de vida de um componente
     useEffect(() => {
-        if(token != '') {
+        if(token !== '') {
             navigate('/home')
         }
     }, [token])
 
     return(
         <>
-            <Grid container direction="row" alignItems="center" justifyContent="center">
-                <Grid item xs={6} alignItems="center">
+            <Grid container className='container'>
+                <Grid item xs={6} alignItems="center" >
                     <Box paddingX={20}>
                         <form onSubmit={onSubmit}>
                             
-                            <Typography variant="h3" gutterBottom component='h3' align='center' style={{ fontWeight: 'bold' }} >Entrar</Typography>
+                            <Typography variant="h3" gutterBottom component='h3' className='botao' style={{ fontWeight: 'bold' }}>Entrar</Typography>
 
-                            <TextField id="usuario" label="Usuário" name='usuario' onChange={(event: ChangeEvent<HTMLInputElement>) => updatedModel(event)} value={userLogin.usuario} variant="outlined" fullWidth margin='normal'></TextField>
-                            <TextField id="senha" label="Senha" name='senha' type='password' onChange={(event: ChangeEvent<HTMLInputElement>) => updatedModel(event)} value={userLogin.senha} variant="outlined" fullWidth margin='normal'></TextField>
+                            <TextField
+                                id="usuario" 
+                                label="Usuário" 
+                                name='usuario' 
+                                onChange={(event: ChangeEvent<HTMLInputElement>) => updatedModel(event)} 
+                                value={userLogin.usuario} 
+                                variant="outlined" 
+                                fullWidth 
+                                margin='normal'>
+                            </TextField>
 
-                            <Box marginTop={2} textAlign="center">
-                                <Button type="submit" variant="contained" style={{ backgroundColor: "#212121", color: "#fff" }}>Entrar</Button>
+                            <TextField 
+                                id="senha" 
+                                label="Senha" 
+                                name='senha' 
+                                type='password'                                                 //contém toda modificação que atualiza a função
+                                onChange={(event: ChangeEvent<HTMLInputElement>) => updatedModel(event)} 
+                                value={userLogin.senha} 
+                                variant="outlined" 
+                                fullWidth 
+                                margin='normal'>
+                            </TextField>
+
+                            <Box className='box-entrar'>
+                                <Button type="submit" 
+                                    variant="contained" 
+                                    style={{ backgroundColor: "#212121", color: "#fff" }}>
+                                        Entrar
+                                </Button>
                             </Box>   
 
                         </form>
                     
 
-                        <Box display= "flex" justifyContent='center' marginTop={2}>
+                        <Box className='box-conta'>
                             <Box marginRight={1}>
                                 <Typography variant='subtitle1' gutterBottom align='center' >Ainda não tem uma conta?</Typography>
                             </Box>
 
                             <Link to='/cadastrousuario'>
-                                <Typography  variant='subtitle1' gutterBottom align='center' style={{ fontWeight: 'bold' }}> Cadastre-se</Typography> 
+                                <Typography  variant='subtitle1' gutterBottom className='text-decorator-none' style={{ fontWeight: 'bold' }}> Cadastre-se</Typography> 
                             </Link>
                         
                         </Box>

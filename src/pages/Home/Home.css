@@ -1,3 +1,40 @@
-.titulo {
-    color:aqua
+.container {
+    direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2F2F2;
 }
+
+.text {
+    text-align: justify;
+    color: black;
+    padding: 15px 0 15px 0;
+}
+
+.text span {
+    position: relative;
+}
+/*  AJUSTAR A PARTIR DAQUI
+.text span::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid #7200ff;
+    left: 0;
+    background: #171717;
+    animation: slide 2.5s steps(10) infinite;
+}
+
+@keyframes slide {
+    100% {
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+} */
+
+.box-botoes {
+    display: flex;
+    justify-content: center;
+}
+

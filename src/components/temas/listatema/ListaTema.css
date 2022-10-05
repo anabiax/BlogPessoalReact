@@ -1,0 +1,8 @@
+.box {
+    display: flex;
+    justify-content: center;
+}
+
+.text-decorator-none{
+    text-decoration: none;
+}

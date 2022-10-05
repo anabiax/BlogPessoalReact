@@ -1,3 +1,34 @@
+.container {
+    justify-content: center;
+    align-items: center;
+    direction: row;
+}
+
+.imagem {
+    background-image: url(https://i.imgur.com/2HlaEye.gif);
+    background-repeat: no-repeat;
+    width: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.botao {
+    text-align: center;
+    font-weight: bold;
+}
+
+.box-entrar {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.box-conta {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
 .bg-login {
     min-width: 100vh; /* no mínimo tem o tamanho inteiro da minha tela*/
     background-image: url("https://lumiere-a.akamaihd.net/v1/images/original_1603304767_this_is_us_4_-_fox_premium_dbfede8b.jpeg");
@@ -8,4 +39,5 @@
 
 .text-decorator-none {
     text-decoration: none;
+    align-items: center;
 }
