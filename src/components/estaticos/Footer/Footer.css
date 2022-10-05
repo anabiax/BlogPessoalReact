@@ -8,12 +8,7 @@
     align-items: center;
 }
 
-.box {
-    align-items: center;
-    background-color: #383838;
-}
-
-.subbox{
+.subbox {
     padding-top: 1rem;
     display: flex;
     align-items: center;
@@ -24,7 +19,6 @@
 .outrobox {
     align-items: center;
     color: white;
-
 }
 
 .social {
