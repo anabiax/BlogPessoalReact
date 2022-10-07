@@ -2,17 +2,20 @@
     direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #F2F2F2;
+    /* background-color: #F2F2F2; */
 }
 
 .text {
     text-align: justify;
     color: black;
-    padding: 15px 0 15px 0;
+    padding: 15px 0 20px 0;
+
 }
 
 .text span {
     position: relative;
+    color: #881c41;
+    font-size: 28px;
 }
 /*  AJUSTAR A PARTIR DAQUI
 .text span::after {

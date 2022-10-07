@@ -19,12 +19,15 @@
 .outrobox {
     align-items: center;
     color: white;
+    padding-top: 15px;
+    padding-bottom: 5px;
 }
 
 .social {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 15px;
 }
 
 

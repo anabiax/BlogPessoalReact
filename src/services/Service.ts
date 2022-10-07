@@ -19,3 +19,12 @@ export const api = axios.create({
                         
         setDados(resposta.data.token) 
     }
+
+                        //n precisa ter um retorno na mesma hora pq o back-end precisa pegar as informações. 
+    export const busca = async(url: any, setDados: any, header: any) => {
+                                                        // onde será colocado o token
+                                                        //API vai retornar após conferir se o usuário está autenticado
+        const resposta = await api.get(url, header) 
+                        
+        setDados(resposta.data) 
+    }

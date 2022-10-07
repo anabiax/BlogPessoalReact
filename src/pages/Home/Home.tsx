@@ -2,7 +2,7 @@ import React from 'react'
 import { Typography, Grid, Button } from '@material-ui/core';
 import { Box } from '@mui/material'
 import './Home.css'
-import fotoLogo from '../../components/img/logo.png'
+import framework from '../../components/img/frameworks.png'
 import TabPostagem from '../../components/postagens/tabpostagem/TabPostagem';
 
 
@@ -31,7 +31,7 @@ function Home() {
                 </Grid>
 
                 <Grid item xs={6} >
-                    <img src={fotoLogo} alt="imagem de um notebook e um computador" width="800px" height="500px" />
+                    <img src={framework} alt="imagem de uma mulher frente ao computador" width="700px" height="600px" style={{ paddingTop: "50px" }} />
                 </Grid>
                 
                 <Grid xs={12} style={{ backgroundColor: "white" }}> 
