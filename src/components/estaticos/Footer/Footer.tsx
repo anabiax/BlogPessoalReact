@@ -28,11 +28,11 @@ function Footer() {
                     </Box>
                         <Box className='footerbaixo'>
                             <Box paddingTop={1}>
-                                <Typography variant="subtitle2" className='footerbaixo2' gutterBottom >© 2022 Copyright</Typography>
+                                <Typography variant="subtitle2" className='footerbaixo1' gutterBottom >© 2022 Copyright</Typography>
                             </Box>
                             <Box >
                                 <hr></hr>
-                                <Typography variant="subtitle2" gutterBottom className='footerbaixo2'>Desenvolvido por Ana Beatriz dos Santos.</Typography>
+                                <Typography variant="subtitle2" gutterBottom className='footerbaixo2'>Desenvolvido a base de muito ☕ por AnaB.</Typography>
                             </Box>
                             </Box>
                 </Grid>

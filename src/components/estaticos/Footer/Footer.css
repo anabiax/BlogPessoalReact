@@ -36,8 +36,14 @@
     height: 70px;
 }
 
+.footerbaixo1 {
+    color: white ;
+    text-align: center;
+
+}
+
 .footerbaixo2 {
     color: white ;
-    background-color: #212121;
     text-align: center;
+    padding-top: 4px;
 }
