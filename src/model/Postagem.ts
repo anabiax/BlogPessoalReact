@@ -8,7 +8,7 @@ interface Postagem {
     titulo: string
     texto: string
     foto: string
-    data: Date // garantindo que é um padrão de data p/ o usuário.
+    data: string // garantindo que é um padrão de data p/ o usuário.
     tema?: Tema | null // objeto do tipo  da model Tema
                 // postagem necessariamente n precisa ter um tema
     // interrogação indica que é opcional/ n obrigatório.

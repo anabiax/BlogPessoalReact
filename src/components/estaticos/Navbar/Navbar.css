@@ -1,7 +1,21 @@
 .cursor {
-    cursor:pointer;
+    cursor: pointer;
     color: #fff;
     border-color: #fff;
     background-color: #212121;
+    text-decoration: none;
 }
 
+.logout {
+    text-decoration: none;
+    color: #C21010;
+    cursor: pointer;
+
+}
+
+
+.text-decorator-none1 {
+    text-decoration: none;
+    justify-content: center;
+    display: flex;
+}

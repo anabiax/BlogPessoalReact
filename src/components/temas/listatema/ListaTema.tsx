@@ -39,7 +39,7 @@ function ListaTema() {
 
     // useEffect roda qnd a tela é carregada. Ele é um disparador da função acima
     useEffect(() => {
-        getTemas()
+        getTemas() //fará a requisição na API
     }, [temas.length]) // toda vez que a minha variável temas mudar de tamanho disparará o getTemas por causa desse useEffect
 
 

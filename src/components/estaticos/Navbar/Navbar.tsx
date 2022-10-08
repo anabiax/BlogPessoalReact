@@ -1,166 +1,134 @@
 import './Navbar.css'
-import * as React from "react";
-import AdbIcon from "@mui/icons-material/Adb"
-import MenuIcon from '@material-ui/icons/Menu'
-import blueGrey from '@material-ui/core/colors/blueGrey'
+import * as React from 'react'
 import { AppBar, Toolbar, Tooltip } from '@material-ui/core'
-import { Box, Menu, Container, Avatar, Button, MenuItem, Typography, IconButton } from '@mui/material'
+import { Box, Menu, Container, Typography, Grid } from '@mui/material'
+import { useNavigate, Link } from 'react-router-dom'
+import useLocalStorage from 'react-use-localstorage'
 
 
-const pages = ['Home', 'Postagens', 'Temas', 'Cadastrar Tema'];
-const settings = ['Perfil', 'Conta', 'Logout'];
+// const settings = ['Perfil', 'Conta', 'Logout'];
 
 
 function Navbar() {
-    
-    const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-    const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
-    const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-        setAnchorElNav(event.currentTarget);
+    let navigate = useNavigate()
+
+    const [token, setToken] = useLocalStorage('token')
+
+    // zerar o token armazenado no localstorage
+    function goLogout() {
+        setToken('')
+        alert('O usuário não está mais logado.')
+        navigate('/login') // direciona p/ a tela de login
     }
 
-    const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-        setAnchorElUser(event.currentTarget);
-    }
 
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-    }
 
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-    }
+
     
     return (
-    <AppBar position="static" style={{ borderColor: "white", backgroundColor: "#212121", color: "white" }} >
-        <Container maxWidth="xl">
-            <Toolbar disableGutters>
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="a"
-                        href="/"
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'monospace',
-                            fontWeight: 800,
-                            letterSpacing: '.5rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        BLOG
-                    </Typography>
 
-                        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-                            
-                            <IconButton
-                                    size="large"
-                                    aria-label="account of current user"
-                                    aria-controls="menu-appbar"
-                                    aria-haspopup="true"
-                                    onClick={handleOpenNavMenu}
-                                    color="inherit"
-                            >
-                                <MenuIcon />
-                            </IconButton>
+        <AppBar position="static" style={{ borderColor: "white", backgroundColor: "#212121", color: "white" }} >
+            <Container maxWidth="xl">
+                <Toolbar disableGutters>
+                        <Typography
+                            variant="h5"
+                            noWrap
+                            component="a"
+                            href="/"
+                            sx={{
+                                mr: 2,
+                                display: { xs: 'none', md: 'flex' },
+                                fontFamily: 'monospace',
+                                fontWeight: 800,
+                                letterSpacing: '.5rem',
+                                color: 'inherit',
+                                textDecoration: 'none',
+                            }}
+                        >
+                            BLOG 
+                        </Typography>
 
-                            <Menu
+
+                            <Grid container justifyContent="flex-end">
+                                <Box display="flex" justifyContent="start">
+                                <Link to='/home'className="text-decorator-none1">
+                                    <Box mx={1} className="cursor">
+                                        <Typography variant="subtitle1">
+                                            HOME
+                                        </Typography>
+                                    </Box>
+                                </Link>
+
+                                <Link to='/posts' className="text-decorator-none1">
+                                    <Box mx={1} className="cursor">
+                                        <Typography variant="subtitle1">
+                                            POSTAGENS
+                                        </Typography>
+                                    </Box>
+                                </Link>
+
+                                <Link to='/temas' className="text-decorator-none1">
+                                    <Box mx={1} className="cursor">
+                                        <Typography variant="subtitle1">
+                                            TEMAS
+                                        </Typography>
+                                    </Box>
+                                </Link>
+
+                                <Link to='/formularioTema' className="text-decorator-none1">
+                                    <Box mx={1} className="cursor">
+                                        <Typography variant="subtitle1">
+                                            CADASTRAR TEMAS
+                                        </Typography>
+                                    </Box>
+                                </Link>
+
+                                <Box mx={1} className="logout" onClick={goLogout}>
+                                    
+                                        <Typography  style={{ paddingLeft: "20px" }} variant="subtitle1" color="inherit">
+                                            LOGOUT
+                                        </Typography>
+                                </Box>
+                            </Box>
+                                
+                        </Grid>
+
+
+                        {/* BOLINHA À DIREITA DA TELA */}
+                            {/* <Box sx={{ flexGrow: 0 }}>
+                                <Tooltip title="Open settings">
+                                    <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                                        <Avatar alt="Remy Sharp"/>
+                                    </IconButton>
+                                </Tooltip>
+                                <Menu
+                                    sx={{ mt: '45px' }}
                                     id="menu-appbar"
-                                    anchorEl={anchorElNav}
+                                    anchorEl={anchorElUser}
                                     anchorOrigin={{
-                                    vertical: 'bottom',
-                                    horizontal: 'left',
-                                }}
+                                        vertical: 'top',
+                                        horizontal: 'right',
+                                    }}
                                     keepMounted
                                     transformOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'left',
-                                }}
-                                    open={Boolean(anchorElNav)}
-                                    onClose={handleCloseNavMenu}
-                                    sx={{
-                                    display: { xs: 'block', md: 'none' },
-                                }}
-                            >
-                                {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center">{page}</Typography>
-                                </MenuItem>
-                            ))}
-                            </Menu>
-
-                        </Box>
-
-                <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-
-                    <Typography
-                        variant="h5"
-                        noWrap
-                        component="a"
-                        href=""
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'flex', md: 'none' },
-                            flexGrow: 1,
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        BLOG
-                    </Typography>
-
-                        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                            {pages.map((page) => (
-                            <Button
-                                key={page}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
-                            >
-                                {page}
-                            </Button>
-                            ))}
-                        </Box>
-
-                        <Box sx={{ flexGrow: 0 }}>
-                            <Tooltip title="Open settings">
-                                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                    <Avatar alt="Remy Sharp"/>
-                                </IconButton>
-                            </Tooltip>
-                            <Menu
-                                sx={{ mt: '45px' }}
-                                id="menu-appbar"
-                                anchorEl={anchorElUser}
-                                anchorOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'right',
-                                }}
-                                keepMounted
-                                transformOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'right',
-                                }}
-                                open={Boolean(anchorElUser)}
-                                onClose={handleCloseUserMenu}
-                            >
-                                {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center">{setting}</Typography>
-                                </MenuItem>
-                            ))}
-                            </Menu>
-                            
-                        </Box>
-                
-            </Toolbar>
-        </Container>
-    </AppBar>
+                                        vertical: 'top',
+                                        horizontal: 'right',
+                                    }}
+                                    open={Boolean(anchorElUser)}
+                                    onClose={handleCloseUserMenu}
+                                >
+                                    {settings.map((setting) => (
+                                    <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                                        <Typography textAlign="center">{setting}</Typography>
+                                    </MenuItem>
+                                ))}
+                                </Menu>
+                            </Box> */}
+                    
+                </Toolbar>
+            </Container>
+        </AppBar>
 
     )
     
