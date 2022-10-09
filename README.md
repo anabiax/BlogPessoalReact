@@ -4,6 +4,10 @@ Criação de um projeto utlizando a biblioteca do ReactTS proposto pela [Generat
 
 Versão utilizada: React 17
 
+## Linguagem:
+![TYPESCRIPT](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+
+
 ## Comandos para a execução do projeto:
 
 ****`npx create-react-app nome-do-projeto --template typescript`**** (criar um projeto react typescript) <br>
