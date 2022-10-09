@@ -1,0 +1,19 @@
+.topo {
+    margin-top: 80px;
+}
+
+.cadastrar {
+    text-align: center;
+}
+
+.finalizar {
+    background-color: #212121;
+    color: white;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.finalizar:hover {
+    background-color: #413F42; /* mouse por cima do elemento fica mais escurinho */
+
+}

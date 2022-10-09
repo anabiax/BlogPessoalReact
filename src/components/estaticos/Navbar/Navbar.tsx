@@ -1,7 +1,7 @@
 import './Navbar.css'
 import * as React from 'react'
 import { AppBar, Toolbar, Tooltip } from '@material-ui/core'
-import { Box, Menu, Container, Typography, Grid } from '@mui/material'
+import { Box, Menu, Container, Typography, Grid, Button } from '@mui/material'
 import { useNavigate, Link } from 'react-router-dom'
 import useLocalStorage from 'react-use-localstorage'
 
@@ -86,9 +86,13 @@ function Navbar() {
 
                                 <Box mx={1} className="logout" onClick={goLogout}>
                                     
-                                        <Typography  style={{ paddingLeft: "20px" }} variant="subtitle1" color="inherit">
+                                        {/* <Typography  style={{ paddingLeft: "20px" }} variant="subtitle1" color="inherit">
                                             LOGOUT
-                                        </Typography>
+                                        </Typography> */}
+
+                                        <Button variant='contained' size='medium' style={{ backgroundColor: '#C21010', fontWeight: 'bold' }} >
+                                            LOGOUT
+                                        </Button>
                                 </Box>
                             </Box>
                                 
