@@ -31,7 +31,6 @@ function TabPostagem() {
                 </TabPanel>
 
 
-                <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align='center' style= {{ fontWeight: "bold", paddingTop: "30px", fontSize: "33px" }}>A dita cuja que vos escreve</Typography>
                 
                 <TabPanel value="2" className="containerr">
                     <Grid item xs={6} >
@@ -41,11 +40,19 @@ function TabPostagem() {
                                             style= {{ borderRadius: "50%", 
                                                     backgroundRepeat: 'no-repeat', 
                                                     backgroundPosition: 'center',
-                                                    border:"4px solid #999" }} />
-
+                                                    border:"4px solid #999",
+                                                    margin: '25px 0 25px 0'  }} />
                     </Grid>
 
                     <Grid>
+                        <Typography variant="h5" 
+                                gutterBottom 
+                                component="h5" 
+                                align='center' 
+                                style= {{ fontWeight: 'bold', fontSize: '33px' }}>
+                                    A dita cuja que vos escreve
+                        </Typography>
+            
                         <Typography variant="body1" gutterBottom color="textPrimary" style={{ fontSize: "18px"}} className="resumop" >Desenvolvedora Full Stack Java Júnior, trazendo como repertório meu fascínio pela interdisciplinaridade atrelada à inovação. 
                                                                                                         Atualmente estou no processo de continuidade de carreira das ciências humanas para o desenvolvimento web e sou participante ativa
                                                                                                         nas comunidades digitais voltadas para as dimensões de gênero e raça na área tecnológica. Reconhecida pela facilidade em me comunicar de maneira assertiva,

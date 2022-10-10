@@ -44,22 +44,22 @@ function ListaPostagem() {
         <>
             {
                 posts.map(post => (
-                    <Box m={2} className="color">
+                    <Box m={2} key={post.id} className="color">
                         <Card variant='outlined'>
                             <CardContent>
                                 <Typography color='textSecondary' gutterBottom>
                                     Postagens
                                 </Typography>
 
-                                <Typography variant='h5' component='h2'> 
+                                <Typography variant='h5' component='h5' style={{ paddingBottom: '10px' }}> 
                                     {post.titulo}
                                 </Typography>
 
-                                <Typography variant='h4' component='h4'> 
+                                <Typography variant='h6' component='h6'> 
                                     {post.texto}
                                 </Typography>
 
-                                <Typography variant='h5' component='h5'> 
+                                <Typography variant='h5' component='h5' style={{ fontWeight: 'bold', paddingTop: '10px' }} > 
                                     {post.tema?.descricao}
                                 </Typography>
                             </CardContent>
@@ -69,7 +69,7 @@ function ListaPostagem() {
 
                                     <Link to={`/formularioPostagem/${post.id}`} className="text-decorator-none">
                                         <Box mx={1}>
-                                            <Button variant='contained' size='small' style={{ backgroundColor: "#A10035", color: "white" }}>
+                                            <Button variant='contained' size='medium' style={{ backgroundColor: "#A10035", color: "white" }}>
                                                 Atualizar
                                             </Button>
                                         </Box>
@@ -77,7 +77,7 @@ function ListaPostagem() {
 
                                     <Link to={`/deletarPostagem/${post.id}`} className='text-decorator-none'>
                                         <Box mx={1}>
-                                            <Button variant='contained' size='small' style={{ backgroundColor: "#212121", color: "white" }}>
+                                            <Button variant='contained' size='medium' style={{ backgroundColor: "#212121", color: "white" }}>
                                                 Deletar
                                             </Button>
                                         </Box>

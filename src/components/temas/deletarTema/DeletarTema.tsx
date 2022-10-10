@@ -77,12 +77,12 @@ function DeletarTema() {
                     <CardActions>
                         <Box display='flex' justifyContent='start' ml={1.0} mb={2}>
                             <Box mx={2}>
-                                <Button onClick={sim} variant='contained' className='marginLeft' size='large' style={{ fontWeight: 'bold'}} >
+                                <Button onClick={sim} variant='contained' size='large' style={{ fontWeight: 'bold'}} >
                                     Sim
                                 </Button>
                             </Box>
                             <Box mx={2}>
-                                <Button onClick={nao} variant='contained' size='large' style={{ backgroundColor: "#AE431E", color: "white", fontWeight: 'bold' }} >
+                                <Button onClick={nao} variant='contained' size='large' style={{ backgroundColor: "#C21010", color: "white", fontWeight: 'bold' }} >
                                     Não
                                 </Button>
                             </Box>

@@ -7,13 +7,12 @@
 }
 
 .finalizar {
-    background-color: #212121;
-    color: white;
-    margin-top: 10px;
-    width: 100%;
+    background-color: #212121 !important;
+    color: white !important;
+    margin-top: 10px !important;
+    width: 100% !important;
 }
 
 .finalizar:hover {
     background-color: #413F42; /* mouse por cima do elemento fica mais escurinho */
-
 }

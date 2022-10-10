@@ -38,9 +38,9 @@ function CadastroPost() {
         id: 0,
         titulo: '',
         texto: '',
-        foto: '',
         data: '',
-        tema: null // vai preencher com o valor do tema solicitado no select tema lá no form
+        tema: null, // vai preencher com o valor do tema solicitado no select tema lá no form
+        date: ''
     })
 
 

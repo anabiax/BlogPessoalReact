@@ -100,7 +100,7 @@ function Login() {
                             </Box>
 
                             <Link to='/cadastrousuario'>
-                                <Typography  variant='subtitle1' gutterBottom className='text-decorator-none' style={{ fontWeight: 'bold' }}> Cadastre-se</Typography> 
+                                <Typography  variant='subtitle1' gutterBottom className='sublinhado' style={{ fontWeight: 'bold', color: "#C21010" }}> Cadastre-se</Typography> 
                             </Link>
                         
                         </Box>

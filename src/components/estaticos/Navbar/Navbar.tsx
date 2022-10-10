@@ -86,13 +86,11 @@ function Navbar() {
 
                                 <Box mx={1} className="logout" onClick={goLogout}>
                                     
-                                        {/* <Typography  style={{ paddingLeft: "20px" }} variant="subtitle1" color="inherit">
+                                        <Typography  style={{ paddingLeft: '12px', fontWeight: 'bold' }} variant="subtitle1" color="inherit">
                                             LOGOUT
-                                        </Typography> */}
+                                        </Typography>
 
-                                        <Button variant='contained' size='medium' style={{ backgroundColor: '#C21010', fontWeight: 'bold' }} >
-                                            LOGOUT
-                                        </Button>
+                                        
                                 </Box>
                             </Box>
                                 
