@@ -7,6 +7,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import UserLogin from '../../model/UserLogin';
 import { login } from '../../services/Service';
 import useLocalStorage from 'react-use-localstorage';
+import { SemanticClassificationFormat } from 'typescript';
 
 function Login() {
 
@@ -31,6 +32,15 @@ function Login() {
             [event.target.name]: event.target.value //valor que o usuário digita
         })              //name do textfield -- capturando a propriedade
     }
+
+    const [form, setForm] = useState(false)
+
+    useEffect(() => {
+        if(userLogin.usuario !== '' && userLogin.senha !== '' && userLogin.senha.length >= 8) {
+            setForm(true)
+        }
+    }, [userLogin])
+    
 
     // essa função vai acessar o meu back-end enviando os dados de login do usuário
     async function onSubmit(event: ChangeEvent<HTMLFormElement>) {
@@ -84,8 +94,10 @@ function Login() {
                             </TextField>
 
                             <Box className='box-entrar'>
-                                <Button type="submit" 
+                                <Button 
+                                    type="submit" 
                                     variant="contained" 
+                                    disabled={!form}
                                     style={{ backgroundColor: "#212121", color: "#fff" }}>
                                         Entrar
                                 </Button>

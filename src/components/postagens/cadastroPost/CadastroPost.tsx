@@ -117,15 +117,14 @@ function CadastroPost() {
 
     return (
         <>
-    
             <Container maxWidth='sm' className='topo'>
                 <form onSubmit={onSubmit}>
-                    <Typography variant='h4' color="textSecondary" align='center' component='h4'>Novo post</Typography>
+                    <Typography variant='h3' color="textSecondary" align='center'  component='h3'>Novo post</Typography>
                     <TextField value={postagem.titulo} onChange={(event: ChangeEvent<HTMLInputElement>) => updatedPostagem(event)} id='titulo' label='Título' variant='outlined' name='titulo' margin='normal' required fullWidth></TextField>
                     <TextField value={postagem.texto} onChange={(event: ChangeEvent<HTMLInputElement>) => updatedPostagem(event)} id='texto' label='Texto' name='texto' variant='outlined' margin='normal' required fullWidth></TextField>
 
 
-                    <FormControl > 
+                    <FormControl fullWidth variant="standard"> 
                         <InputLabel id='demo-simple-select-helper-label'>Tema</InputLabel>
                         
                         <Select labelId='demo-simple-select-helper-label' 
@@ -137,13 +136,13 @@ function CadastroPost() {
 
                                 {temas.map((tema) => (
 
-                                    <MenuItem value={tema.id}>{tema.descricao}</MenuItem>
+                                    <MenuItem value={tema.id} >{tema.descricao}</MenuItem>
                                 ))}
                         </Select>
 
                         <FormHelperText>Escolha um tema para a postagem</FormHelperText>
                         
-                        <Button style={{ backgroundColor: "#212121", color: "white", width: "100%" }} type='submit' variant='contained'>
+                        <Button style={{ backgroundColor: "#212121", color: "white", width: "100%" }} type='submit' disabled={tema.id === 0} variant='contained'>
                             Finalizar
                         </Button>
 
