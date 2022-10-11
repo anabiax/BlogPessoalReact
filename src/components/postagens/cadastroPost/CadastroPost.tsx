@@ -1,12 +1,14 @@
 import { Button, Container, FormControl, FormHelperText, InputLabel, Select, MenuItem, TextField, Typography } from '@material-ui/core'
 import { useParams } from 'react-router-dom'
 import './CadastroPost.css'
-import useLocalStorage from 'react-use-localstorage'
 import Tema from '../../../model/Tema'
 import Postagem from '../../../model/Postagem'
 import { useNavigate } from 'react-router-dom'
 import React, { useState, useEffect, ChangeEvent } from 'react'
 import { buscaId, busca, put, post } from '../../../services/Service'
+import { useSelector } from 'react-redux'
+import { TokenState } from '../../../store/tokens/tokenReducer'
+import { toast } from 'react-toastify'
 
 
 function CadastroPost() {
@@ -17,12 +19,23 @@ function CadastroPost() {
 
     const [temas, setTemas] = useState<Tema[]>([])
 
-    const [token, setToken] = useLocalStorage('token')
+    const token = useSelector<TokenState, TokenState['tokens']>(
+        (state) => state.tokens
+    )
 
 
     useEffect(() => {
         if(token === '') {
-            alert('Você precisa estar logado.')
+            toast.error('Você precisa estar logado.', {
+                position: 'top-right', 
+                autoClose: 2000, //2 segundos
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false, // mover alocalização de local
+                theme: 'colored',
+                progress: undefined,
+            })
             navigate('/login') // direciona p/ a tela de login
         }
     }, [token])
@@ -97,7 +110,16 @@ function CadastroPost() {
                     Authorization: token 
                 },
             })
-            alert('Postagem atualizada com sucesso!')
+            toast.success('Postagem atualizada com sucesso!', {
+                position: 'top-right', 
+                autoClose: 2000, //2 segundos
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false, // mover alocalização de local
+                theme: 'colored',
+                progress: undefined,
+            })
 
         } else {
             post(`/postagens`, postagem, setPostagem, {
@@ -105,7 +127,16 @@ function CadastroPost() {
                     Authorization: token 
                 },
             })
-            alert('Postagem cadastrada com sucesso!')
+            toast.success('Postagem cadastrada com sucesso!', {
+                position: 'top-right', 
+                autoClose: 2000, //2 segundos
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false, // mover alocalização de local
+                theme: 'colored',
+                progress: undefined,
+            })
         }
         back()
     }

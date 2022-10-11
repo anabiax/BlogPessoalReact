@@ -1,10 +1,11 @@
 import React, { useState, useEffect, ChangeEvent } from 'react'
-import User from '../../model/User';
-import { cadastroUsuario } from '../../services/Service';
+import User from '../../model/User'
+import { cadastroUsuario } from '../../services/Service'
 import './CadastroUsuario.css'
-import { Link, useNavigate} from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'
 import { Typography } from '@material-ui/core'
 import { Box, Button, Grid, TextField } from '@mui/material'
+import { toast } from 'react-toastify'
 
 
 function CadastroUsuario() {
@@ -64,14 +65,42 @@ function CadastroUsuario() {
         if(confirmarSenha === user.senha && user.senha.length >= 8) {
             try {
                 await cadastroUsuario(`usuarios/cadastrar`, user, setUserResult)
-                alert("Usuário cadastrado com sucesso!");
+                toast.success('Usuário cadastrado com sucesso!', {
+                    position: 'top-right', 
+                    autoClose: 2000, //2 segundos
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false, // mover a localização de local
+                    theme: 'colored',
+                    progress: undefined,
+                })
             } catch (error) {
-                alert("Falha ao cadastrar o usuário. Por favor, confira os campos.")
+                toast.error('Falha ao cadastrar o usuário. Por favor, confira os campos.', {
+                    position: 'top-right', 
+                    autoClose: 2000, //2 segundos
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false, // mover a localização de local
+                    theme: 'colored',
+                    progress: undefined,
+                })
             }
         } else {
-            alert("Dados inconsistentes. Erro ao cadastrar, por favor, verifique as informações submetidas.");
+            toast.error('Dados inconsistentes. Erro ao cadastrar, por favor, verifique as informações submetidas.', {
+                position: 'top-right', 
+                autoClose: 2000, //2 segundos
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false, // mover a localização de local
+                theme: 'colored',
+                progress: undefined,
+            })
         }
     } 
+    
 
 
     return(
@@ -116,7 +145,6 @@ function CadastroUsuario() {
                                 variant="outlined"
                                 fullWidth
                                 margin="normal"
-                                required
                             />
 
                             <TextField
@@ -145,17 +173,16 @@ function CadastroUsuario() {
                             />
 
                             <Box className='text-decorator-none'>
-                                <Link to='/login'>
-                                    <Button variant="contained" className='btnCancelar' style={{ backgroundColor: "#212121" }}>
+                                <Link to='/login' className='text-decorator-noneh'>
+                                    <Button variant="contained" className='btnbotao' >
                                         Cancelar
                                     </Button>
                                 </Link>
                                 
-                                <Button type='submit' variant="contained" disabled={!cadastro} className='btnCancelar' style={{ backgroundColor: "#212121", color: "#fff" }}>
+                                <Button type='submit' variant="contained" disabled={!cadastro} className='btnbotao' >
                                         Cadastrar
                                 </Button>
                             </Box>
-
                         </form>
 
                     </Grid>

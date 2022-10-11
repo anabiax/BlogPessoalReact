@@ -37,6 +37,11 @@
     background-size: cover;
 }
 
-.sublinhado {
-    text-decoration: none !important;
+.text-decorator-noneh {
+    text-decoration: none;
+}
+
+.botaocadastrar {
+    font-weight: bold !important;
+    color: #a10035;
 }

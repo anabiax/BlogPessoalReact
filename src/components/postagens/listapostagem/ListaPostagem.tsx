@@ -1,10 +1,13 @@
 import './ListaPostagem.css'
 import React, { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { CardContent, Typography , Box, Card, CardActions, Button} from '@mui/material'
+import { CardContent, Typography , Box, Card, CardActions, Button } from '@mui/material'
 import Postagem from '../../../model/Postagem'
-import useLocalStorage from 'react-use-localstorage'
 import { busca } from '../../../services/Service'
+import { useSelector } from 'react-redux'
+import { TokenState } from '../../../store/tokens/tokenReducer'
+import { toast } from 'react-toastify'
+
 
 
 function ListaPostagem() {
@@ -13,15 +16,28 @@ function ListaPostagem() {
 
     const [posts, setPosts] = useState<Postagem[]>([])
 
-    const [token, setToken] = useLocalStorage('token')
+    const token = useSelector<TokenState, TokenState['tokens']>(
+        (state) => state.tokens
+    )
+
 
     // protegendo a tela de navegação p/ quem n tiver um token (ñ estiver logado)
     useEffect(() => {
         if(token === '') {
-            alert('Você precisa estar logado.')
+            toast.error('Você precisa estar logado.', {
+                position: 'top-right', 
+                autoClose: 2000, //2 segundos
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false, // mover alocalização de local
+                theme: 'colored',
+                progress: undefined,
+            })
             navigate('/login') // direciona p/ a tela de login
         }
     }, [token])
+
 
     // indo no meu back-end buscar os temas
     async function getPost() {

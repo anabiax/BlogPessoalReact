@@ -1,11 +1,12 @@
-import { CardContent, Typography , Box, Card, CardActions, Button} from '@mui/material'
+import { CardContent, Typography , Box, Card, CardActions, Button } from '@mui/material'
 import './ListaTema.css'
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Tema from '../../../model/Tema'
-import useLocalStorage from 'react-use-localstorage'
 import { busca } from '../../../services/Service'
-
+import { useSelector } from 'react-redux'
+import { TokenState } from '../../../store/tokens/tokenReducer'
+import { toast } from 'react-toastify'
 
 
 function ListaTema() {
@@ -17,12 +18,23 @@ function ListaTema() {
 
     const [temas, setTemas] = useState<Tema[]>([])
 
-    const [token, setToken] = useLocalStorage('token') // pegando o token de volta de dentro do navegador
+    const token = useSelector<TokenState, TokenState['tokens']>(
+        (state) => state.tokens
+    )
 
     // protegendo a tela de navegação p/ quem n tiver um token (ñ estiver logado)
     useEffect(() => {
         if(token === '') {
-            alert('Você precisa estar logado.')
+            toast.error('Você precisa estar logado.', {
+                position: 'top-right', 
+                autoClose: 2000, //2 segundos
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false, // mover a localização de local
+                theme: 'colored',
+                progress: undefined,
+            })
             navigate('/login') // direciona p/ a tela de login
         }
     }, [token])

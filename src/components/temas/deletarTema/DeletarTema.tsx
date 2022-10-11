@@ -2,11 +2,12 @@ import { Button, CardActions, CardContent, Typography } from '@material-ui/core'
 import { Box, Card } from '@mui/material'
 import './DeletarTema.css'
 import { useNavigate, useParams } from 'react-router-dom'
-import useLocalStorage from 'react-use-localstorage'
-import React, { useState, useEffect, ChangeEvent } from 'react'
+import React, { useState, useEffect } from 'react'
 import Tema from '../../../model/Tema'
-import { buscaId, deleteId, post, put } from '../../../services/Service'
-
+import { buscaId, deleteId } from '../../../services/Service'
+import { useSelector } from 'react-redux'
+import { TokenState } from '../../../store/tokens/tokenReducer'
+import { toast } from 'react-toastify'
 
 
 function DeletarTema() {
@@ -15,14 +16,25 @@ function DeletarTema() {
 
     const { id } = useParams<{id: string}>()
 
-    const [token, setToken] = useLocalStorage('token')
+    const token = useSelector<TokenState, TokenState['tokens']>(
+        (state) => state.tokens
+    )
 
     const [tema, setTema] = useState<Tema>()
 
     // protegendo a tela de navegação p/ quem n tiver um token (ñ estiver logado)
     useEffect(() => {
         if(token === '') {
-            alert('Você precisa estar logado.')
+            toast.error('Você precisa estar logado.', {
+                position: 'top-right', 
+                autoClose: 2000, //2 segundos
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false, // mover a localização de local
+                theme: 'colored',
+                progress: undefined,
+            })
             navigate('/login') // direciona p/ a tela de login
         }
     }, [token])
@@ -52,12 +64,22 @@ function DeletarTema() {
                 'Authorization': token
             }
         })
-        alert('Tema deletado com sucesso!')
+        toast.success('Tema deletado com sucesso!', {
+            position: 'top-right', 
+            autoClose: 2000, //2 segundos
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false, // mover a localização de local
+            theme: 'colored',
+            progress: undefined,
+        })
     }
 
     function nao() {
         navigate('/temas')
     }
+    
     
 
     return(

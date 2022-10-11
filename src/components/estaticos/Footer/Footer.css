@@ -13,23 +13,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 6px;
+    padding-top: 3px;
 }
 
 .outrobox {
     align-items: center;
     color: white;
-    padding-top: 15px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 2px;
 }
 
 .social {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
-
 
 .footerbaixo {
     background-color: #212121;
@@ -39,7 +38,6 @@
 .footerbaixo1 {
     color: white ;
     text-align: center;
-
 }
 
 .footerbaixo2 {

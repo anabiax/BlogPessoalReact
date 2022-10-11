@@ -18,16 +18,19 @@
     padding-bottom: 20px;
 }
 
-.btnCancelar {
+.btnbotao {
     margin-right: 20px !important;
-    background-color: #212121;
-    color: #fff;
-
+    background-color: #212121 !important;
+    color: #fff !important;
 }
 
 .text-decorator-none {
-    text-decoration: none;
+    text-decoration: none !important;
     justify-content: center;
     display: flex;
     margin-top: 2em;
+}
+
+.text-decorator-noneh {
+    text-decoration: none;
 }

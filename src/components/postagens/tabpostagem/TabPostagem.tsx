@@ -14,13 +14,15 @@ function TabPostagem() {
         setValue(newValue)
     }
 
+
+    
     return(
         <>                              
             <TabContext value={value} >
                 <AppBar position="static" >
                     <Tabs onChange={handleChange} centered style={{ backgroundColor: "#212121"}}>
-                        <Tab label="Todas as postagens" value="1" style={{ color: "#fff"}} />
-                        <Tab label="Sobre" value="2" style={{ color: "#fff"}} />
+                        <Tab label="Todas as postagens" value="1" style={{ color: "#fff", marginRight: "20px"}} />
+                        <Tab label="Sobre mim" value="2" style={{ color: "#fff", marginLeft: "20px"}} />
                     </Tabs>
                 </AppBar>
 
@@ -45,24 +47,26 @@ function TabPostagem() {
                     </Grid>
 
                     <Grid>
-                        <Typography variant="h5" 
+                        {/* <Typography variant="h5" 
                                 gutterBottom 
                                 component="h5" 
                                 align='center' 
-                                style= {{ fontWeight: 'bold', fontSize: '33px' }}>
+                                style= {{ fontWeight: 'bold', fontSize: '33px', paddingBottom: '50px' }}>
                                     A dita cuja que vos escreve
-                        </Typography>
+                        </Typography> */}
             
-                        <Typography variant="body1" gutterBottom color="textPrimary" style={{ fontSize: "18px"}} className="resumop" >Desenvolvedora Full Stack Java Júnior, trazendo como repertório meu fascínio pela interdisciplinaridade atrelada à inovação. 
-                                                                                                        Atualmente estou no processo de continuidade de carreira das ciências humanas para o desenvolvimento web e sou participante ativa
-                                                                                                        nas comunidades digitais voltadas para as dimensões de gênero e raça na área tecnológica. Reconhecida pela facilidade em me comunicar de maneira assertiva,
-                                                                                                        trabalhar em equipes múltiplas e gerenciar conflitos, uma vez que busco adotar como ponto de desenvolvimento constante bons relacionamentos interpessoais.
+                        <Typography variant="body1" 
+                                    gutterBottom color="textPrimary" 
+                                    style={{ fontSize: "18px"}} 
+                                    className="resumop">
+                                        Desenvolvedora Full Stack Java Júnior, trazendo como repertório meu fascínio pela interdisciplinaridade atrelada à inovação. 
+                                        Atualmente estou no processo de continuidade de carreira das ciências humanas para o desenvolvimento web e sou participante ativa
+                                        nas comunidades digitais voltadas para as dimensões de gênero e raça na área tecnológica. Reconhecida pela facilidade em me comunicar de maneira assertiva,
+                                        trabalhar em equipes múltiplas e gerenciar conflitos, uma vez que busco adotar como ponto de desenvolvimento constante bons relacionamentos interpessoais.
                         </Typography>
                     </Grid>
 
                 </TabPanel>
-
-
             </TabContext>
         </>
     )

@@ -1,19 +1,23 @@
-import React, { ChangeEvent, useState, useEffect } from 'react';
+import React, { ChangeEvent, useState, useEffect } from 'react'
 import './Login.css'
-import { Typography, Button } from '@material-ui/core';
+import { Typography, Button } from '@material-ui/core'
 import { Grid, Box, TextField } from '@mui/material'
 import { Link, useNavigate } from 'react-router-dom'
-// import logo from '../../components/img/logo.png'
-import UserLogin from '../../model/UserLogin';
-import { login } from '../../services/Service';
-import useLocalStorage from 'react-use-localstorage';
-import { SemanticClassificationFormat } from 'typescript';
+import UserLogin from '../../model/UserLogin'
+import { login } from '../../services/Service'
+import { useDispatch } from 'react-redux'
+import { addToken } from '../../store/tokens/action'
+import { toast } from 'react-toastify'
+
+
 
 function Login() {
 
     let navigate = useNavigate()
 
-    const[token, setToken] = useLocalStorage('token')
+    const dispatch = useDispatch ()
+
+    const[token, setToken] = useState('')
                                                 // isso aqui é TypeScript
     const[userLogin, setUserLogin] = useState<UserLogin>({
         id: 0, // n tem como começar em branco, então inicializa em zero
@@ -47,19 +51,41 @@ function Login() {
         event.preventDefault()
         try {
             await login ('usuarios/logar', userLogin, setToken)
-            alert("Usuário logado com sucesso!");
+            toast.success('Usuário logado com sucesso!', {
+                position: 'top-right', 
+                autoClose: 2000, //2 segundos
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false, // mover a localização de local
+                theme: 'colored',
+                progress: undefined,
+            })
 
         } catch(error) {
-            alert("Dados inconsistentes. Erro ao logar.");
+            toast.error('Dados inconsistentes. Erro ao logar.', {
+                position: 'top-right', 
+                autoClose: 2000, //2 segundos
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false, // mover a localização de local
+                theme: 'colored',
+                progress: undefined,
+            })
         }
     }
 
     // responsável pelo controle do ciclo de vida de um componente
     useEffect(() => {
         if(token !== '') {
+            dispatch(addToken(token))
             navigate('/home')
         }
     }, [token])
+
+
+    
 
     return(
         <>
@@ -111,8 +137,8 @@ function Login() {
                                 <Typography variant='subtitle1' gutterBottom align='center' >Ainda não tem uma conta?</Typography>
                             </Box>
 
-                            <Link to='/cadastrousuario'>
-                                <Typography  variant='subtitle1' gutterBottom className='sublinhado' style={{ fontWeight: 'bold', color: "#C21010" }}> Cadastre-se</Typography> 
+                            <Link to='/cadastrousuario' className='text-decoration-noneh'>
+                                <Typography variant='subtitle1' gutterBottom className='botaocadastrar'> Cadastre-se</Typography> 
                             </Link>
                         
                         </Box>
@@ -122,8 +148,7 @@ function Login() {
                 <Grid item xs={6} style= {{
                     backgroundImage: `url(https://i.imgur.com/2HlaEye.gif)`,
                     backgroundRepeat: 'no-repeat', width: '100vh', minHeight: '100vh', backgroundSize: 'cover', backgroundPosition: 'center'
-                }} >
-
+                    }} >
                 </Grid>
             </Grid>
         </>

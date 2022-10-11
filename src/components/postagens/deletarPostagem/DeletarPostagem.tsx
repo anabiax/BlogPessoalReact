@@ -4,9 +4,12 @@ import { Button, Card, Typography, CardActions } from '@material-ui/core'
 import { Box } from '@mui/material'
 import React, { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import useLocalStorage from 'react-use-localstorage'
 import Postagem from '../../../model/Postagem'
 import { buscaId, deleteId } from '../../../services/Service'
+import { useSelector } from 'react-redux'
+import { TokenState } from '../../../store/tokens/tokenReducer'
+import { toast } from 'react-toastify'
+
 
 
 function DeletarPostagem() {
@@ -15,14 +18,26 @@ function DeletarPostagem() {
 
     const { id } = useParams<{id: string}>()
 
-    const [token, setToken] = useLocalStorage('token')
+    const token = useSelector<TokenState, TokenState['tokens']>(
+        (state) => state.tokens
+    )
+
 
     const [post, setPost] = useState<Postagem>()
 
     // protegendo a tela de navegação p/ quem n tiver um token (ñ estiver logado)
     useEffect(() => {
         if(token === '') {
-            alert('Você precisa estar logado.')
+            toast.error('Você precisa estar logado.', {
+                position: 'top-right', 
+                autoClose: 2000, //2 segundos
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false, // mover alocalização de local
+                theme: 'colored',
+                progress: undefined,
+            })
             navigate('/login') // direciona p/ a tela de login
         }
     }, [token])
@@ -52,14 +67,25 @@ function DeletarPostagem() {
                 'Authorization': token
             }
         })
-        alert('Postagem deletada com sucesso!')
+        toast.success('Postagem deletada com sucesso!', {
+            position: 'top-right', 
+            autoClose: 2000, //2 segundos
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false, // mover alocalização de local
+            theme: 'colored',
+            progress: undefined,
+        })
     }
 
     function nao() {
         navigate('/posts')
     }
     
-    return(
+
+    
+    return (
         <>
             <Box m={2}>
                 <Card variant='outlined'>

@@ -6,6 +6,8 @@ import './ModalPostagem.css'
 import CadastroPost from '../cadastroPost/CadastroPost'
 import './ModalPostagem.css'
 
+
+
 function getModalStyle() {
     const top = 50
     const left = 50
@@ -16,6 +18,7 @@ function getModalStyle() {
         transform: `translate(-${top}%, -${left}%)`,
     }
 }
+
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -30,6 +33,7 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 )
 
+
 function ModalPostagem() {
     const classes = useStyles()
     const [modalStyle] = React.useState(getModalStyle)
@@ -43,6 +47,7 @@ function ModalPostagem() {
     const handleClose = () => {
         setOpen(false)
     }
+
 
 
     const body = (
@@ -76,4 +81,5 @@ function ModalPostagem() {
     )
 }
 
-export default ModalPostagem;
+
+export default ModalPostagem

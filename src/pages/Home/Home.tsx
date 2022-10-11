@@ -1,24 +1,42 @@
 import React, { useEffect } from 'react'
-import { Typography, Grid, Button } from '@material-ui/core';
+import { Typography, Grid, Button } from '@material-ui/core'
 import { Box } from '@mui/material'
 import './Home.css'
 import framework from '../../components/img/frameworks.png'
-import TabPostagem from '../../components/postagens/tabpostagem/TabPostagem';
-import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
-import { useNavigate } from "react-router-dom"
-import useLocalStorage from "react-use-localstorage"
+import TabPostagem from '../../components/postagens/tabpostagem/TabPostagem'
+import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem'
+import { useNavigate, Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { TokenState } from '../../store/tokens/tokenReducer'
+import { toast } from 'react-toastify'
+
+
 
 function Home() {
 
     let navigate = useNavigate()
-    const [token, setToken] = useLocalStorage('token')
+
+    const token = useSelector<TokenState, TokenState['tokens']>(
+        (state) => state.tokens
+    )
 
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado')
+            toast.error('Você precisa estar logado.', {
+                position: 'top-right', 
+                autoClose: 2000, //2 segundos
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false, // mover alocalização de local
+                theme: 'colored',
+                progress: undefined,
+            })
             navigate('/login')
         }
     }, [token])
+
+
 
     return (
         <>
@@ -40,7 +58,9 @@ function Home() {
                             <ModalPostagem />
                         </Box>
 
-                        <Button variant="outlined" style={{ backgroundColor: "#212121", color: "white" }}>Ver postagens</Button>
+                        <Link to='/posts' className='text-decorator-noneh'>
+                            <Button variant="outlined" style={{ backgroundColor: "#212121", color: "white" }} >Ver postagens</Button>
+                        </Link>
                     </Box>
                 </Grid>
 
