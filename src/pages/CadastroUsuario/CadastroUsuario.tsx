@@ -70,10 +70,10 @@ function CadastroUsuario() {
                     autoClose: 2000, //2 segundos
                     hideProgressBar: false,
                     closeOnClick: true,
-                    pauseOnHover: false,
-                    draggable: false, // mover a localização de local
-                    theme: 'colored',
-                    progress: undefined,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: 0,
+                    theme: "light",
                 })
             } catch (error) {
                 toast.error('Falha ao cadastrar o usuário. Por favor, confira os campos.', {
@@ -81,10 +81,10 @@ function CadastroUsuario() {
                     autoClose: 2000, //2 segundos
                     hideProgressBar: false,
                     closeOnClick: true,
-                    pauseOnHover: false,
-                    draggable: false, // mover a localização de local
-                    theme: 'colored',
-                    progress: undefined,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: 0,
+                    theme: "light",
                 })
             }
         } else {
@@ -93,10 +93,10 @@ function CadastroUsuario() {
                 autoClose: 2000, //2 segundos
                 hideProgressBar: false,
                 closeOnClick: true,
-                pauseOnHover: false,
-                draggable: false, // mover a localização de local
-                theme: 'colored',
-                progress: undefined,
+                pauseOnHover: true,
+                draggable: true,
+                progress: 0,
+                theme: "light",
             })
         }
     } 

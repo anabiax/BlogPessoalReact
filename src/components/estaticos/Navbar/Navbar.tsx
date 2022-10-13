@@ -35,9 +35,9 @@ function Navbar() {
         navigate('/login') // direciona p/ a tela de login
     }
 
-    var navbarComponent
+    let navbarComponent
 
-    // renderiza se houver um token
+    // renderiza se houver um token -- RENDERIZAÇÃO CONDICIONAL
     if(token !== '') {
         navbarComponent = 
             <AppBar position="static" style={{ borderColor: "white", backgroundColor: "#212121", color: "white" }} >

@@ -56,10 +56,10 @@ function Login() {
                 autoClose: 2000, //2 segundos
                 hideProgressBar: false,
                 closeOnClick: true,
-                pauseOnHover: false,
-                draggable: false, // mover a localização de local
-                theme: 'colored',
-                progress: undefined,
+                pauseOnHover: true,
+                draggable: true,
+                progress: 0,
+                theme: "light",
             })
 
         } catch(error) {
@@ -68,10 +68,10 @@ function Login() {
                 autoClose: 2000, //2 segundos
                 hideProgressBar: false,
                 closeOnClick: true,
-                pauseOnHover: false,
-                draggable: false, // mover a localização de local
-                theme: 'colored',
-                progress: undefined,
+                pauseOnHover: true,
+                draggable: true,
+                progress: 0,
+                theme: "light",
             })
         }
     }
@@ -146,7 +146,7 @@ function Login() {
                 </Grid>
 
                 <Grid item xs={6} style= {{
-                    backgroundImage: `url(https://images.unsplash.com/photo-1542736488-1967b42fcf54?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1048&q=80)`,
+                    backgroundImage: `url(https://media.tenor.com/_G9vJ2BP__AAAAAd/coraline.gif)`,
                     backgroundRepeat: 'no-repeat', width: '100vh', minHeight: '100vh', backgroundSize: 'cover', backgroundPosition: 'center'
                     }} >
                 </Grid>

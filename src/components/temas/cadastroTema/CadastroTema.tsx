@@ -28,15 +28,15 @@ function CadastroTema() {
     // protegendo a tela de navegação p/ quem n tiver um token (ñ estiver logado)
     useEffect(() => {
         if(token === '') {
-            toast.error('Você precisa estar logado.', {
+            toast.warn('Você precisa estar logado.', {
                 position: 'top-right', 
                 autoClose: 2000, //2 segundos
                 hideProgressBar: false,
                 closeOnClick: true,
-                pauseOnHover: false,
-                draggable: false, // mover a localização de local
-                theme: 'colored',
-                progress: undefined,
+                pauseOnHover: true,
+                draggable: true,
+                progress: 0,
+                theme: "light",
             })
             navigate('/login') // direciona p/ a tela de login
         }
@@ -84,10 +84,10 @@ function CadastroTema() {
                 autoClose: 2000, //2 segundos
                 hideProgressBar: false,
                 closeOnClick: true,
-                pauseOnHover: false,
-                draggable: false, // mover a localização de local
-                theme: 'colored',
-                progress: undefined,
+                pauseOnHover: true,
+                draggable: true,
+                progress: 0,
+                theme: "light",
             })
         } else {
             post(`tema`, tema, setTema, {
@@ -100,10 +100,10 @@ function CadastroTema() {
                 autoClose: 2000, //2 segundos
                 hideProgressBar: false,
                 closeOnClick: true,
-                pauseOnHover: false,
-                draggable: false, // mover a localização de local
-                theme: 'colored',
-                progress: undefined,
+                pauseOnHover: true,
+                draggable: true,
+                progress: 0,
+                theme: "light",
             })
         }
         back()

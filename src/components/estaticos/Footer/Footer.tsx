@@ -15,7 +15,7 @@ function Footer() {
         (state) => state.tokens
     )
 
-    var footerComponent
+    let footerComponent
 
     // se for vazio ele n pode renderizar o meu token
     if (token !== '') {
