@@ -9,10 +9,10 @@ Versão utilizada: React 17
 <a  href="#">
       <img  src="https://img.shields.io/static/v1?label=Biblioteca&message=Typescript&color=e23237&style=for-the-badge&logo=Angular"  alt="Language: Typescript">
     </a>
-    
-    <a href="#">
+     <a href="#">
 		<img src="https://img.shields.io/static/v1?label=Biblioteca&message=Typescript&color=green&style=for-the-badge&logo=Ghost"  alt="Language: Typescript">
 	</a>
+    
 
 ## Comandos para a execução do projeto:
 
