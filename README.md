@@ -22,7 +22,7 @@ Versão utilizada: React 17
 ****`yarn start`**** (executa os scripts) <br>
 
 Obs: é preciso ter o NodeJS instalado previamente. <br>
-A outra opção de execução senão yarn é o ****`npm install`**** seguido do ****`yarn start`****
+A outra opção de execução senão yarn é o ****`npm install`**** seguido do ****`npm start`****
 
 ## Estilização com Material-UI
 
