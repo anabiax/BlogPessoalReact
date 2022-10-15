@@ -9,15 +9,20 @@ Versão utilizada: React 17
      <a href="#">
 		<img src="https://img.shields.io/static/v1?label=Biblioteca&message=React&color=green&style=for-the-badge&logo=Ghost"  alt="Language: React">
 	</a>
+	<a href="#">
+        <img src="https://img.shields.io/static/v1?label=Language&message=Typescript&color=blue&style=for-the-badge&logo=Typescript" alt="Language: Typescript">
+    </a>
     
 
 ## Comandos para a execução do projeto:
 
 ****`npx create-react-app nome-do-projeto --template typescript`**** (criar um projeto react typescript) <br>
 ****`cd nome-do-projeto`**** (entrar na pasta do arquivo) <br>
+****`yarn`**** (baixar as dependências instaladas) <br>
 ****`yarn start`**** (executa os scripts) <br>
 
-Abrir na porta padrão fornecida no terminal, no caso [http://localhost:3000](http://localhost:3000/).
+Obs: é preciso ter o NodeJS instalado previamente. <br>
+A outra opção de execução senão yarn é o ****`npm install`**** seguido do ****`yarn start`****
 
 ## Estilização com Material-UI
 
@@ -27,25 +32,19 @@ CSS GRID -estilizar o layout de uma página, considerando linhas e colunas.
 
 Flex box - elementos organizados dentro de containers.
 
-Instalação do Material-UI
+## Versão: React 17
 
-`yarn add @material-ui/core@4.12.3` 
+## Implementações:
 
-`yarn add @material-ui/icons@4.11.2` 
+-componentização react;
+-rotas;
+-redux;
+-axios;
+-CRUD;
+-mui/material;
+-toastify personalizado;
+-consumo de API por meio da documentação do Swagger;
 
-`yarn add @mui/icons-material@5.0.5` 
-
-`yarn add @material-ui/lab@4.0.0-alpha.60` 
-
-`yarn add @emotion/react@11.5.0`
-
-`yarn add @emotion/styled@11.3.0`
-
-`yarn add @mui/material@5.0.6`
-
-## Comando de instalação p/ a utilização de rotas:
-
-`yarn add react-router-dom@6`
 
 ## Status:
 
