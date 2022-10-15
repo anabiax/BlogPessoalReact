@@ -5,10 +5,7 @@ Criação de um projeto utlizando a biblioteca do ReactTS proposto pela [Generat
 Versão utilizada: React 17
 
 ## Linguagem:
-![TYPESCRIPT](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-<a  href="#">
-      <img  src="https://img.shields.io/static/v1?label=Biblioteca&message=Typescript&color=e23237&style=for-the-badge&logo=Angular"  alt="Language: Typescript">
-    </a>
+.
      <a href="#">
 		<img src="https://img.shields.io/static/v1?label=Biblioteca&message=React&color=green&style=for-the-badge&logo=Ghost"  alt="Language: React">
 	</a>
