@@ -2,8 +2,6 @@
 
 Criação de um projeto utlizando a biblioteca do ReactTS proposto pela [Generation Brasil](https://brazil.generation.org/) com o objetivo de construir uma SPA para o blog pessoal no módulo de front-end, fazendo consumo da API desenvolvida no módulo de back-end.
 
-Versão utilizada: React 17
-
 ## Linguagem:
 .
      <a href="#">
@@ -31,6 +29,8 @@ combinação dos dois p/ compor a página web
 CSS GRID -estilizar o layout de uma página, considerando linhas e colunas.
 
 Flex box - elementos organizados dentro de containers.
+
+
 
 ## Versão: React 17
 
