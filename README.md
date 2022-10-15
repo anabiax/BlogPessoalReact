@@ -1,6 +1,6 @@
 # BlogPessoalReact
 
-Criação de um projeto utlizando a biblioteca do ReactTS proposto pela [Generation Brasil](https://brazil.generation.org/) com o objetivo de construir uma SPA para o blog pessoal no módulo de front-end.
+Criação de um projeto utlizando a biblioteca do ReactTS proposto pela [Generation Brasil](https://brazil.generation.org/) com o objetivo de construir uma SPA para o blog pessoal no módulo de front-end, fazendo consumo da API desenvolvida no módulo de back-end.
 
 Versão utilizada: React 17
 
