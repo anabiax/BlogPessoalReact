@@ -6,7 +6,9 @@ Versão utilizada: React 17
 
 ## Linguagem:
 ![TYPESCRIPT](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-
+<a  href="#">
+      <img  src="https://img.shields.io/static/v1?label=Framework&message=Typescript&color=e23237&style=for-the-badge&logo=Angular"  alt="Language: Typescript">
+    </a>
 
 ## Comandos para a execução do projeto:
 
