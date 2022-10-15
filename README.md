@@ -11,6 +11,7 @@ Criação de um projeto utlizando a biblioteca do ReactTS proposto pela [Generat
         <img src="https://img.shields.io/static/v1?label=Language&message=Typescript&color=blue&style=for-the-badge&logo=Typescript" alt="Language: Typescript">
     </a>
     
+## Versão: React 17
 
 ## Comandos para a execução do projeto:
 
@@ -31,19 +32,16 @@ CSS GRID -estilizar o layout de uma página, considerando linhas e colunas.
 Flex box - elementos organizados dentro de containers.
 
 
-
-## Versão: React 17
-
 ## Implementações:
 
--componentização react;
--rotas;
--redux;
--axios;
--CRUD;
--mui/material;
--toastify personalizado;
--consumo de API por meio da documentação do Swagger;
+-componentização react; <br>
+-rotas; <br>
+-redux; <br>
+-axios; <br>
+-CRUD; <br>
+-mui/material; <br>
+-toastify personalizado; <br>
+-consumo de API por meio da documentação do Swagger; <br>
 
 
 ## Status:
