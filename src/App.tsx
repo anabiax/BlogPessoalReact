@@ -18,6 +18,9 @@ import 'react-toastify/dist/ReactToastify.css'
 
 
 
+import Principal from './components/Principal/Principal'
+
+
 function App() {
   return (
       <Provider store={store}>
@@ -26,7 +29,6 @@ function App() {
             <Navbar />
               <div style={{ minHeight: '80vh'}}>
                 <Routes>
-
                   <Route path="/" element={ <Login /> } />
                   <Route path="/login" element={ <Login /> } />
                   <Route path="/home" element={ <Home /> } />
