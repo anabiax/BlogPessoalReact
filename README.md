@@ -2,26 +2,24 @@
 
 Criação de um projeto utlizando a biblioteca do ReactTS proposto pela [Generation Brasil](https://brazil.generation.org/) com o objetivo de construir uma SPA para o blog pessoal no módulo de front-end, fazendo consumo da API desenvolvida no módulo de back-end.
 
-## Linguagem:
-.
-     <a href="#">
-		<img src="https://img.shields.io/static/v1?label=Biblioteca&message=React&color=green&style=for-the-badge&logo=Ghost"  alt="Language: React">
-	</a>
-	<a href="#">
-        <img src="https://img.shields.io/static/v1?label=Language&message=Typescript&color=blue&style=for-the-badge&logo=Typescript" alt="Language: Typescript">
-    </a>
+## Hard Skills:
+<img src="https://img.shields.io/badge/git-282C34?logo=git&logoColor=F05032" alt="git logo" title="git" height="25" />
+<img src="https://img.shields.io/badge/TypeScript-282C34?logo=typescript&logoColor=3178C6" alt="TypeScript logo" title="TypeScript" height="25" />
+<img src="https://img.shields.io/badge/HTML5-282C34?logo=html5&logoColor=E34F26" alt="HTML5 logo" title="HTML5" height="25" />
+<img src="https://img.shields.io/badge/CSS3-282C34?logo=css3&logoColor=1572B6" alt="CSS3 logo" title="CSS3" height="25" />
     
-## Versão: React 17
+### Versão: React 17
 
 ## Comandos para a execução do projeto:
 
-****`npx create-react-app nome-do-projeto --template typescript`**** (criar um projeto react typescript) <br>
 ****`cd nome-do-projeto`**** (entrar na pasta do arquivo) <br>
+****`code .`**** (abrir o editor de textos Visual Studio Code) <br>
 ****`yarn`**** (baixar as dependências instaladas) <br>
-****`yarn start`**** (executa os scripts) <br>
+****`yarn start`**** (executar os scripts) <br>
 
-Obs: é preciso ter o NodeJS instalado previamente. <br>
+Obs: é preciso ter o Node instalado previamente, buscando manter a versão mais atualizada do software. <br>
 A outra opção de execução senão yarn é o ****`npm install`**** seguido do ****`npm start`****
+
 
 ## Estilização com Material-UI
 
@@ -33,15 +31,33 @@ Flex box - elementos organizados dentro de containers.
 
 
 ## Implementações:
-
--componentização react; <br>
--rotas; <br>
--redux; <br>
--axios; <br>
--CRUD; <br>
--mui/material; <br>
--toastify personalizado; <br>
--consumo de API por meio da documentação do Swagger; <br>
+<ul>
+	<li>Componentização;</li>
+</ul>
+<ul>
+	<li>Router DOM;</li>
+</ul>
+<ul>
+	<li>Hooks;</li>
+</ul>
+<ul>
+	<li>Redux;</li>
+</ul>
+<ul>
+	<li>Axios;</li>
+</ul>
+<ul>
+	<li>CRUD;</li>
+</ul>
+<ul>
+	<li>Mui/material;</li>
+</ul>
+<ul>
+	<li>Toastify personalizado;</li>
+</ul>
+<ul>
+	<li>Consumo de API por meio da documentação do Swagger;</li>
+</ul>
 
 
 ## Status:
