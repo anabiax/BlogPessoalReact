@@ -3,7 +3,7 @@
 Criação de um projeto utlizando a biblioteca do ReactTS proposto pela [Generation Brasil](https://brazil.generation.org/) com o objetivo de construir uma SPA para o blog pessoal no módulo de front-end, fazendo consumo da API desenvolvida no módulo de back-end.
 
 ## Hard Skills:
-<img src="https://img.shields.io/badge/git-282C34?logo=git&logoColor=F05032" alt="git logo" title="git" height="25" /> <img src="https://img.shields.io/badge/React Native-282C34?logo=react&logoColor=61DAFB" alt="React Native logo" title="React Native" height="25" />
+<img src="https://img.shields.io/badge/git-282C34?logo=git&logoColor=F05032" alt="git logo" title="git" height="25" /> <img src="https://img.shields.io/badge/React Native-282C34?logo=react&logoColor=61DAFB" alt="React logo" title="React" height="25" />
 <img src="https://img.shields.io/badge/TypeScript-282C34?logo=typescript&logoColor=3178C6" alt="TypeScript logo" title="TypeScript" height="25" />
 <img src="https://img.shields.io/badge/HTML5-282C34?logo=html5&logoColor=E34F26" alt="HTML5 logo" title="HTML5" height="25" />
 <img src="https://img.shields.io/badge/CSS3-282C34?logo=css3&logoColor=1572B6" alt="CSS3 logo" title="CSS3" height="25" />
