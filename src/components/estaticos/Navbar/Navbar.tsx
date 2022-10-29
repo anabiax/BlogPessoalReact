@@ -59,7 +59,7 @@ function Navbar() {
                                     marginLeft: '-43px',
                                 }}
                             >
-                                BLOG   
+                                BLOG    
                             </Typography>
 
 
@@ -99,7 +99,7 @@ function Navbar() {
 
                                     <Box mx={1} className="logout" onClick={goLogout}>
                                         
-                                            <Typography  style={{ paddingLeft: '12px', fontWeight: 'bold' }} variant="subtitle1" color="inherit">
+                                            <Typography style={{ paddingLeft: '12px', fontWeight: 'bold' }} variant="subtitle1" color="inherit">
                                                 LOGOUT
                                             </Typography>
 
