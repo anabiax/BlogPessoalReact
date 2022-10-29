@@ -23,7 +23,7 @@ Conforme configurado no back-end, a regra de negócio do campo senha deve, obrig
 
 ## Tela de login
 ![Captura de tela de 2022-10-29 10-26-27](https://user-images.githubusercontent.com/105956403/198836149-8f5b26c2-afb1-4d85-a7d1-65178268a2e0.png)
-Ao passo que neste campo cabe as verificações do usuário cadastrado, a lógica do item anterior segue a mesma.
+Ao passo que neste campo cabem as verificações do usuário cadastrado, a lógica do item anterior segue a mesma.
 
 ## Tela principal do blog
 ![Captura de tela de 2022-10-29 11-07-31](https://user-images.githubusercontent.com/105956403/198836220-02320f12-dc67-41e4-9761-f8ff2b5b494a.png)
@@ -49,7 +49,7 @@ A outra opção de execução senão yarn é o ****`npm install`**** seguido do 
 ## Estilização com Material-UI
 Combinação do CSS grid e dos parâmetros do flex box p/ compor a página web.
 
-CSS GRID -estilizar o layout de uma página, considerando linhas e colunas.
+CSS GRID -estilizar o layout de uma página, considerando linhas e colunas. <br>
 Flex box - elementos organizados dentro de containers.
 
 ## Implementações:
