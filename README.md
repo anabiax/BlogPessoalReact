@@ -12,7 +12,8 @@ Criação de um projeto utlizando a biblioteca do ReactTS proposto pela [Generat
 
 ### Versão: React 17
 
-### Link do projeto no ar:  https://blogpessoalgenerationbrasil.netlify.app/
+### Link do projeto no ar: 
+https://blogpessoalgenerationbrasil.netlify.app/
 
 ## Tela de Cadastro
 ![Captura de tela de 2022-10-29 10-26-16](https://user-images.githubusercontent.com/105956403/198836120-00367527-97fc-4465-9bac-464b90149be9.png)
